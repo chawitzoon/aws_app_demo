@@ -1,6 +1,6 @@
 pylint==2.7.2
 pytest==6.2.2
-black==22.1.0
+black==23.3.0
 fastapi
 uvicorn
 httpx
