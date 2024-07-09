@@ -3,7 +3,7 @@ pytest==6.2.2
 black==22.1.0
 fastapi
 uvicorn
-httpx==0.26.0
+httpx
 # scikit-learn==0.24.0
 # pandas==1.2.3
 # click==7.1.2
