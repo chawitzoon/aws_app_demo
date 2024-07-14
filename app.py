@@ -50,7 +50,7 @@ async def predict_next_price(
 ):
     input_prices = np.array([[price1, price2, price3, price4, price5, price6, price7]])
     next_price_predicted = predict(input_prices)
-    return {"next_price_predicted": next_price_predicted}
+    return {"result": next_price_predicted}
 
 
 if __name__ == "__main__":

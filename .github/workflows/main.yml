@@ -27,6 +27,7 @@ jobs:
     
   build-and-push:
     name: Build and Push to ECR
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
