@@ -5,18 +5,22 @@ import torch
 import json
 import joblib
 import logging
+
 logging.basicConfig(level=logging.INFO)
 
 import warnings
+
 warnings.filterwarnings("ignore", category=UserWarning)
 
 from pathlib import Path
+
 base_dir = Path(__file__).resolve().parent
 
-MODEL_WEIGHT_FILEPATH = base_dir / 'mlib_model' / 'lstm_model.pth'
-HYPER_PARAM_FILEPATH = base_dir / 'mlib_model' / 'lstm_model_hyper_param.json'
-X_SCALER_FILEPATH = base_dir / 'mlib_model' / 'X_scaler.pkl'
-Y_SCALER_FILEPATH = base_dir / 'mlib_model' / 'y_scaler.pkl'
+MODEL_WEIGHT_FILEPATH = base_dir / "mlib_model" / "lstm_model.pth"
+HYPER_PARAM_FILEPATH = base_dir / "mlib_model" / "lstm_model_hyper_param.json"
+X_SCALER_FILEPATH = base_dir / "mlib_model" / "X_scaler.pkl"
+Y_SCALER_FILEPATH = base_dir / "mlib_model" / "y_scaler.pkl"
+
 
 def load_model(
     model_weight_filepath=MODEL_WEIGHT_FILEPATH,

@@ -20,7 +20,12 @@ device = get_device()
 
 # Construct the full path to the JSON file
 hyper_param = load_hyper_param()
-lstm_agent = Agent(hyper_param['input_size'], hyper_param['hidden_size'], hyper_param['num_stacked_layers'], device = device)
+lstm_agent = Agent(
+    hyper_param["input_size"],
+    hyper_param["hidden_size"],
+    hyper_param["num_stacked_layers"],
+    device=device,
+)
 
 # lstm_agent.train_loader = train_loader
 # lstm_agent.test_loader = test_loader
