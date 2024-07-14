@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest -vv test_mlib.py
-	# python -m pytest -vv --cov=cli --cov=mlib --cov=utilscli --cov=app test_mlib.py
+	# python -m pytest -vv --cov=cli --cov=mlib --cov=utilscli --cov=app test_app.py
 
 format:
 	black .
