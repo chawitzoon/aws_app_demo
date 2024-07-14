@@ -13,3 +13,9 @@ uvicorn
 # requests==2.25.1
 
 # ruff
+
+numpy
+pandas
+matplotlib
+torch
+scikit-learn

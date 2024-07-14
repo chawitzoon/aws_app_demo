@@ -7,7 +7,9 @@ test:
 	# python -m pytest -vv --cov=cli --cov=mlib --cov=utilscli --cov=app test_mlib.py
 
 format:
-	black *.py
+	black .
+	# black *.py
+	
 
 lint:
 	pylint --disable=R,C,W1203,E1101 mlib cli utilscli
