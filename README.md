@@ -1,19 +1,20 @@
 [![Python application test with Github Actions](https://github.com/chawitzoon/aws_app_demo/actions/workflows/main.yml/badge.svg)](https://github.com/chawitzoon/aws_app_demo/actions/workflows/main.yml)
 
 # aws_app_demo: Fast API for Amazon Stock prediction endpoint (MLOps and Machine learning project)
-(Obsoleted Project, moved to to utlize Docker Hub and Azure App Service instead TBD) 
+(Obsoleted Project, moved to utilise Docker Hub and Azure App Service instead-> [new repository](https://github.com/chawitzoon/price_decision_fastapi)) 
 
 This is planned to be integrated with [main repository](https://github.com/chawitzoon/dash-app-ml-devops/tree/main) 
 
-## Overview of ReadME
+## Overview of README
 1. Introduction
 2. Project overview
 3. Project components
-4. Future Work
+4. Snapshot of services used
+5. Future Work
 
 ## Introduction
 
-This project demonstrate the CI/CD using AWS services. The detail are as follows:
+This project demonstrates the CI/CD using AWS services. The details are as follows:
 1. ### Source Code Management (SCM): 
 
 The source code is managed in this GitHub repository.
@@ -21,7 +22,7 @@ The source code is managed in this GitHub repository.
 2. ### Continuous Integration (CI):
 
 When changes are made to the main branch, GitHub Actions workflow is triggered.
-The workflow checks out code (lint, test, etc), builds a Docker image using your Dockerfile.
+The workflow checks out code (lint, test, etc), and builds a Docker image using your Dockerfile.
 
 3. ### Container Registry:
 
@@ -59,15 +60,15 @@ Technologies Used:
 ### mlib library
 - mlib.py: includes functions that are called by app.py or other cli tools
 - mlib_util.py: includes helper functions, model (LSTM) class, Agent class (for convinience in training, validating, visualization and test prediction)
-- __init__.py: treat the directory as a callabale library
+- __init__.py: treat the directory as a callable library
 - mlib_model folder: including
-  - lstm_model_hyper_param.json: hyper parameter used in model class and Agent class
+  - lstm_model_hyper_param.json: hyperparameter used in the model class and Agent class
   - lstm_model.pth: trained model weight, saved by torch save function
   - X_scaler.pkl: Scaler for inputs obtained during training
   - y_scaler.pkl: Scaler for output obtained during training
 ### test_app.py: used pytest for unit testing in CI
 ### test_mlib.py: used for experiment and EDA/model development phase
-### Dockerfile: build Docker image and set the application to run by gunicorn
+### Dockerfile: build a Docker image and set the application to run by gunicorn
 ### .github/workflows/main.yml
 - build job: for install, lint, test, format
 - build-and-push job: build Docker Image and push to ECR
@@ -76,7 +77,7 @@ Technologies Used:
   - Build, Tag, and Push the Image to Amazon ECR
   - (the keys and info are stored in Github Secrets)
 
-## Snipshot of service used
+## Snapshot of services used
 
 ### Github Action
 <img width="1792" alt="aws_project_outline" src="image_readme\github_action.png">
@@ -88,10 +89,10 @@ Technologies Used:
 <img width="1792" alt="aws_project_outline" src="image_readme\aws_app_runner_screenshot.png">
 
 ### FastAPI
-note: the prediction endpoint is tested as GET request for simplicity for now.
+note: the prediction endpoint is tested as a GET request for simplicity for now.
 <img width="1792" alt="aws_project_outline" src="image_readme\aws_fastapi_example.png">
 
 ## Future Work
 
-Switch to Azure service and integrated to Flask app
-Add decision making part by using Reinforcement learning and algorithmic trading
+- Switch to Azure service and integrate to Flask app
+- Add decision-making part by using Reinforcement learning and algorithmic trading
