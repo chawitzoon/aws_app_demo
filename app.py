@@ -40,17 +40,17 @@ async def divide(num1: int, num2: int):
     "/predict_next_price/{price1}/{price2}/{price3}/{price4}/{price5}/{price6}/{price7}"
 )
 async def predict_next_price(
-    price1: int,
-    price2: int,
-    price3: int,
-    price4: int,
-    price5: int,
-    price6: int,
-    price7: int,
+    price1: float,
+    price2: float,
+    price3: float,
+    price4: float,
+    price5: float,
+    price6: float,
+    price7: float,
 ):
     input_prices = np.array([[price1, price2, price3, price4, price5, price6, price7]])
     next_price_predicted = predict(input_prices)
-    return {"result": next_price_predicted}
+    return {"result": round(float(next_price_predicted), 5)}
 
 
 if __name__ == "__main__":
