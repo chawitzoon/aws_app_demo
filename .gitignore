@@ -167,3 +167,6 @@ mlib/AMZN.csv
 
 # test file
 test.py
+
+# local image
+image/
